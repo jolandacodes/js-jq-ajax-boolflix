@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.img-logo {
+    display: inline-block;
+    color: red;
+}
+
+.header input {
+    height: 30px;
+    width: 200px;
+}
