@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Boolflix</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    />
     <script src="script.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header container">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
         <div class="flex-item img-logo">
-            <h1>Boolflix</h1>
+          <img
+            src="https://fontmeme.com/permalink/200918/4937b74c6317b36c509baa13669b4b20.png"
+            alt=""
+          />
         </div>
         <div class="flex-item searchbar">
-            <input id="searchform" type="text" placeholder="Cerca film.." class="ms_input">
-    </div>
-
-    <div class="container">
-
-        <div class="target">
+          <input
+            id="searchform"
+            type="text"
+            placeholder="Cerca film.."
+            class="ms_input"
+          />
+        </div>
+      </div>
+      <div class="movies-header">
+          <h1>Movies</h1>
+      </div>
+      <div class="target">
+      </div>
+      <div class="tv-header">
+        <h1>TV Series</h1>
+        </div>
+        <div class="target2">
         </div>
     </div>
 
     <script id="movie-template" type="text/x-handlebars-template">
-
-        <div class="movie">
-          <ul>
+      <div class="movie">
+        <img class="poster" src="{{imglink}}" alt="poster" />
+        <div class="movie-info hidden">
+             <ul>
             <li><span class="title">Title: </span><span class="info">{{ title }}</span></li>
             <li><span class="title">Type: </span><span class="info">{{ type }}</span></li>
             <li><span class="title">Original Title: </span><span class="info">{{ original }}</span></li>
             <li><span class="title">Language: </span><span class="info">{{{ flag }}}</span></li>
             <li><span class="title">Vote: </span><span class="info">{{ rating }} - {{{ stars }}}</span></li>
-          </ul>
-    
+             </ul>
         </div>
-    
-      </script>
-
-</body>
+      </div>
+    </script>
+  </body>
 </html>
